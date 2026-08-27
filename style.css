@@ -1,0 +1,269 @@
+/* VARIABLES & COLOR PALETTE */
+:root {
+    --gold: #d4af37;
+    --bg-dark: #0a0a0c;
+    --card-bg: rgba(18, 18, 22, 0.85);
+    --border-color: rgba(212, 175, 55, 0.2);
+    --text-main: #ffffff;
+    --text-muted: #a0a0a5;
+}
+
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    background-image: linear-gradient(to bottom, rgba(10, 10, 12, 0.75), rgba(10, 10, 12, 0.95)), 
+                      url('./imagens/fundo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+/* BANNER SUPERIOR */
+.banner-aviso {
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--gold);
+    text-align: center;
+    padding: 6px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* NAV BAR */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 60px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-left: 25px;
+}
+
+.nav-links a.active {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 4px;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 20px 60px;
+    max-width: 850px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.logo-title {
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.section-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.anos-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.ano-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ESTRUTURA PRINCIPAL */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    padding: 40px 60px 0 60px;
+    align-items: start;
+}
+
+.section-title {
+    color: var(--gold);
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+/* CARDS DE EVENTOS */
+.cards-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px;
+}
+
+.card-thumb {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+}
+
+.card-date, .card-tags {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #c59b27, #8a6812);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* ACERVO */
+.acervo-col {
+    margin-top: 0;
+}
+
+.acervo-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acervo-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+
+.acervo-btn:hover {
+    transform: translateX(5px);
+}
+
+.btn-repertorio { background: linear-gradient(90deg, #7a5218, #3b2505); }
+.btn-posters    { background: linear-gradient(90deg, #4a2840, #24111f); }
+.btn-videos     { background: linear-gradient(90deg, #134552, #072128); }
+.btn-fotos      { background: linear-gradient(90deg, #612712, #290d04); }
+
+/* REGRA RESPONSIVA PARA CELULARES E TABLETS */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+
+    .hero, .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .event-card {
+        flex: 1 1 100%;
+    }
+}
